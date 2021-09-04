@@ -1,15 +1,18 @@
-var createLayout = require('layout-bmfont-text')
-//var inherits = require('inherits')
-var createIndices = require('quad-indices')
+import createLayout from './3rdparty/layout-bmfont-text/index.js';
 
-var vertices = require('./lib/vertices')
-var utils = require('./lib/utils')
+//var inherits = require('inherits')
+import createIndices from './3rdparty/quad-indices/index.js';
+
+import * as vertices from './lib/vertices.js';
+import * as utils from './lib/utils.js';
 
 //var Base = THREE.BufferGeometry
 
-module.exports = function createTextGeometry(opt) {
+import * as THREE from "../../three/Three.js";
+
+export function createTextGeometry(opt) {
     return new TextGeometry(opt)
-}
+};
 
 class TextGeometry extends THREE.BufferGeometry {
     constructor(opt) {

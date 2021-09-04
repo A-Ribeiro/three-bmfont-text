@@ -8,9 +8,10 @@
  */
 
 global.THREE = require('three')
-var createOrbitViewer = require('three-orbit-viewer')(THREE)
-var createText = require('../')
-var SDFShader = require('../shaders/sdf')
+import createOrbitViewerFactory from 'three-orbit-viewer';
+const createOrbitViewer = createOrbitViewerFactory(THREE);
+import createText from '../';
+import SDFShader from '../shaders/sdf';
 
 // load up a 'fnt' and texture
 require('./load')({
